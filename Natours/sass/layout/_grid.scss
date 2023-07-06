@@ -4,8 +4,7 @@
  
 .row {
     max-width: $grid-width;
-    
-    margin: 0 auto;//this is to align block elements in the center. Text-align was not used because only texts are aligned
+     margin: 0 auto;//this is to align block elements in the center. Text-align was not used because only texts are aligned
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical; 
