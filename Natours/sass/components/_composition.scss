@@ -1,0 +1,84 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 55%; //percentage value was used in this scenario because it is a relative unit unlike px which is absolute
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 2rem;
+        
+        &--p1 {
+            left: 0; //play with these values to wrap yur hands around them
+            top: -2rem;
+        }
+
+        &--p2 {
+            right: 0;
+            top: 2rem;
+        } 
+
+        &--p3 {
+            left: 20%;
+            top: 10rem;
+        }
+
+        &:hover {
+            outline: 1.5rem solid $color-primary;
+            transform: scale(1.05) translateY(-.4rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.9);
+    }
+
+} 
+
+.col-1-of-3 {
+    background-color: #ffffff;
+    
+}
+
+.feature-tour {
+    //background-color: #ffffff;
+   
+
+    &-img {
+        width: 100%;
+        display: block;
+        height: auto;
+        
+        
+        
+        
+
+        &-water {
+           
+        }
+
+        &-highland {
+        
+        }
+
+        &-snow {
+        
+        }
+    }
+}
+
+.spanning {
+    display: block;
+    text-align:center;
+    
+    &:not(:last-child){ 
+        border-bottom: 1px solid grey; 
+        margin-bottom: 1rem;
+        padding: 3px;
+    }
+    
+}
