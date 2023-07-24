@@ -39,46 +39,7 @@
 
 } 
 
-.col-1-of-3 {
-    background-color: #ffffff;
+.col-1-of-3 { 
     
 }
 
-.feature-tour {
-    //background-color: #ffffff;
-   
-
-    &-img {
-        width: 100%;
-        display: block;
-        height: auto;
-        
-        
-        
-        
-
-        &-water {
-           
-        }
-
-        &-highland {
-        
-        }
-
-        &-snow {
-        
-        }
-    }
-}
-
-.spanning {
-    display: block;
-    text-align:center;
-    
-    &:not(:last-child){ 
-        border-bottom: 1px solid grey; 
-        margin-bottom: 1rem;
-        padding: 3px;
-    }
-    
-}
