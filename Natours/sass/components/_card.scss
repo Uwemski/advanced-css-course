@@ -1,10 +1,44 @@
 .card {
-    background-color: orangered;
-    height: 52rem;
-    transition: all .8s;
+    perspective: 150rem;
+    //-moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;//because of the absolute posiioning of the child elememnt it took the parent element out of its natural flow and therefore lost the height.
+    //for that reason the perspective was not there anymore(remember that our instructor emphasizd about height(big one) when he introduced perspective property to us. 
+    //for float, we would've used a clearfix but for positioning we just added the height that the child element possess to the parent element. It would take a while to fully grasp this but I will
+    
+
+    &__side { 
+        color: #fff;
+        font-size: 2rem;
+        background-color: orangered;
+
+        height: 50rem;
+        transition: all .8s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+
+        &--front { 
+            background-color: orangered;
+
+        }
+
+        &--back { 
+            background-color: green;
+            transform: rotateY(180deg);
+        }
+    }
+    
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
 
 }
 
-.card:hover {
-    transform: rotateY(180deg);
-}
