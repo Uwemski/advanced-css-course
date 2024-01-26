@@ -1,6 +1,6 @@
 .card {
     perspective: 150rem;
-    //-moz-perspective: 150rem;
+    -moz-perspective: 150rem;//this is so that mozilla browser can implement this style
     position: relative;
     height: 50rem;//because of the absolute posiioning of the child elememnt it took the parent element out of its natural flow and therefore lost the height.
     //for that reason the perspective was not there anymore(remember that our instructor emphasizd about height(big one) when he introduced perspective property to us. 
@@ -24,6 +24,7 @@
 
         &--front {
             background-color: #fff;
+            color: $color-black; 
         }
 
         &--back {
@@ -37,12 +38,18 @@
     
 
     &:hover &__side--front {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
 
     &:hover &__side--back {
         transform: rotateY(0);
     }
 
+    &-picture {
+        
+        &--1 {
+            background-image: url();
+        }
+    }
 }
 
