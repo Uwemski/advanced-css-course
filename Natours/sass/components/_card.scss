@@ -1,4 +1,5 @@
 .card {
+    //FUNCTIONALITY
     perspective: 150rem;
     -moz-perspective: 150rem;//this is so that mozilla browser can implement this style
     position: relative;
@@ -45,10 +46,12 @@
         transform: rotateY(0);
     }
 
-    &-picture {
-        
+    //FRONT SIDE STYLING
+    &_picture {
+        background-size: cover;
+
         &--1 {
-            background-image: url();
+            background-image: url(../img/nat-5.jpg);
         }
     }
 }
